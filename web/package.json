@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "next",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "export": "npm run build && next export"
@@ -15,7 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "@sanity/block-content-to-react": "^2.0.7",
-    "@sanity/client": "^2.2.6",
+    "@sanity/client": "^2.7.1",
     "antd": "^4.12.3",
     "next": "^10.0.7",
     "react": "^17.0.1",
