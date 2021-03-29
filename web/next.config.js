@@ -8,17 +8,25 @@ module.exports = {
       // get all the posts and return those with slugs
       .fetch('*[_type == "post"].slug.current')
       .then(data =>
+        {
         // use reduce to build an object with routes
         // and select the blog.js file, and send in the
         // correct query paramater.
-        data.reduce(
-          (acc, slug) => ({
+        console.log(data);
+        const routes = data.reduce(
+          (acc, slug) => {console.log(slug); return ({
             '/': { page: '/' },
             ...acc,
-            [`/post/${slug}`]: { page: '/post', query: { slug } }
-          }),
+            [`/blog/${slug}`]: { page: '/post', query: { slug } }
+          })},
           {}
-        )
+       
+          )
+          console.log(routes)
+          return routes;
+
+        }
+        
       )
       .catch(console.error)
     return path
