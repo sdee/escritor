@@ -1,12 +1,23 @@
-import client from "../client";
+import client, {urlFor} from "../client";
 const BlockContent = require("@sanity/block-content-to-react");
+const imageUrlBuilder = require('@sanity/image-url')
 
-const Post = ({ body, title }) => {
+const Post = ({title, body}) => {
+  const serializers = {
+    types: {
+      reference: ({node}) => {
+        return (
+        <pre>
+          <img src={urlFor(node.photo.image).width(200).url()} />
+        </pre>
+      )
+      }
+    }
+  }
   return (
     <>
-    Test
       <h2>{title}</h2>
-      <BlockContent blocks={body}></BlockContent>
+      <BlockContent blocks={body} serializers={serializers}></BlockContent>
     </>
   );
 };
@@ -15,9 +26,11 @@ Post.getInitialProps = async function (context) {
   // It's important to default the slug so that it doesn't return "undefined"
   let { slug = "" } = context.query;
   
+
+
   return await client.fetch(
     `
-      *[_type == "post" && slug.current==$slug][0]{body, title}
+    *[_type == "post" && slug.current=='all-about-tacu-tacu'][0]{body[]{..., _type=='reference' => {"photo":@->}}, title}
     `,
     { slug }
   );
