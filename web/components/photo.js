@@ -1,4 +1,4 @@
-import urlFor from "../client";
+import {urlFor} from "../util";
 
 const joinIfExists = (...arr) => arr.filter(x => !!x).join(', ');
 

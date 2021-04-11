@@ -1,4 +1,4 @@
-import client, { urlFor } from "../client";
+import client from "../client";
 import { Photo } from "../components/photo";
 const BlockContent = require("@sanity/block-content-to-react");
 
@@ -30,7 +30,7 @@ Post.getInitialProps = async function (context) {
 
   return await client.fetch(
     `
-    *[_type == "post" && slug.current=='all-about-tacu-tacu'][0]{body[]{..., _type=='reference' => {"photo":@->{image, caption, place->, dish-}}}, title}
+    *[_type == "post" && slug.current=='all-about-tacu-tacu'][0]{body[]{..., _type=='reference' => {"photo":@->{image, caption, place->, dish->}}}, title}
     `,
     { slug }
   );
