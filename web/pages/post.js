@@ -27,10 +27,9 @@ const Post = ({ title, body }) => {
 Post.getInitialProps = async function (context) {
   // It's important to default the slug so that it doesn't return "undefined"
   let { slug = "" } = context.query;
-
   return await client.fetch(
     `
-    *[_type == "post" && slug.current=='all-about-tacu-tacu'][0]{body[]{..., _type=='reference' => {"photo":@->{image, caption, place->, dish->}}}, title}
+    *[_type == "post" && slug.current==$slug][0]{body[]{..., _type=='reference' => {"photo":@->{image, caption, place->, dish->}}}, title}
     `,
     { slug }
   );
