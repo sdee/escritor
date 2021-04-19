@@ -21,7 +21,6 @@ module.exports = {
           {}
        
           )
-          console.log(routes)
           return routes;
 
         }
