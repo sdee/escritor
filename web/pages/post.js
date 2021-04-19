@@ -19,7 +19,7 @@ const Post = ({ title, body }) => {
   return (
     <>
       <h2>{title}</h2>
-      <BlockContent blocks={body} serializers={serializers}></BlockContent>
+      <BlockContent blocks={body} serializers={serializers} />
     </>
   );
 };

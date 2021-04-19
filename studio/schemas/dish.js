@@ -24,6 +24,12 @@ export default {
               type: 'string'
           },
           {
+            name: 'mainPhoto',
+            title: 'Main Photo',
+            type: 'reference',
+            to: [{type: 'photo'}]
+          },
+          {
               name: 'variants', 
               title: 'Variants', 
               type: 'array',

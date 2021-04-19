@@ -12,7 +12,6 @@ module.exports = {
         // use reduce to build an object with routes
         // and select the blog.js file, and send in the
         // correct query paramater.
-        console.log(data);
         const routes = data.reduce(
           (acc, slug) => {console.log(slug); return ({
             '/': { page: '/' },
