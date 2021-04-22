@@ -1,8 +1,9 @@
 import { urlFor, joinIfExists } from "../util";
 
-const _formatPlace = ({ name, _type, location }) => {
+const _formatPlace = ({ name, _type, location=""}) => {
+   
   let placeString = "";
-  const { address, neighborhood, city } = location;
+  const { address="", neighborhood, city } = location;
   const cityString = joinIfExists(neighborhood, city);
   // Example:  El Mercado (Av Hipólito Unanue 203, Miraflores, Lima) 
   if (_type === "restaurant" && address) {
@@ -29,7 +30,7 @@ export const Caption = ({ caption, place, dish }) => {
       formattedCaption = dish;
       // Example: "El Mercado, Miraflores, Lima"
     } else if (place) {
-      formattedCaption = _formatPlace(place.name, place.location);
+      formattedCaption = _formatPlace(place);
     }
   }
   return <i>{formattedCaption}</i>;
@@ -37,9 +38,9 @@ export const Caption = ({ caption, place, dish }) => {
 
 export const Photo = ({ photo: { place, image, caption, dish } }) => {
   return (
-    <>
-      <img src={urlFor(image).width(800).url()} /> <br />
-      <Caption caption={caption} dish={dish} place={place} /> <br />
-    </>
+    <figure>
+      <img src={urlFor(image).width(800).url()} />
+      <figcaption><Caption caption={caption} dish={dish} place={place} /></figcaption>
+    </figure>
   );
 };
