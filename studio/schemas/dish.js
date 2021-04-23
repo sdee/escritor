@@ -19,11 +19,6 @@ export default {
             type: 'string',
           },
           {
-              name: 'variationDescription',
-              title: 'Variation Description',
-              type: 'string'
-          },
-          {
             name: 'mainPhoto',
             title: 'Main Photo',
             type: 'reference',
@@ -34,12 +29,7 @@ export default {
               title: 'Variants', 
               type: 'array',
               of: [
-                {
-                  type: 'reference',
-                  to: [
-                    {type: 'dish'},
-                  ]
-                }
+                {type: 'variant'}
               ]
           },
           {
