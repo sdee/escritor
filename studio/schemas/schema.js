@@ -16,6 +16,7 @@ import location from './location'
 import restaurant from './restaurant'
 import place from './place'
 import subgenre from './subgenre'
+import variant from './variant'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -36,6 +37,7 @@ export default createSchema({
     location,
     restaurant,
     place,
+    variant,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,

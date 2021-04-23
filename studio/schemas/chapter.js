@@ -20,7 +20,7 @@ export default {
       of: [
         {
           type: "reference",
-          to: [{ type: "part" }, {type: "dishList"}],
+          to: [{ type: "part" }, { type: "dishList" }],
         },
       ],
     },

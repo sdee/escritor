@@ -11,7 +11,7 @@ export default {
       {
         name: "intro",
         title: "Introduction",
-        type: "blockContent",
+        type: "text",
       },
       {
           name: 'dishes',
