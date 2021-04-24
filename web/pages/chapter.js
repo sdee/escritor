@@ -126,12 +126,13 @@ const Chapter = ({ title, intro, parts=[] }) => {
 Chapter.getInitialProps = async function (context) {
   let { slug = "" } = context.query;
   return await client.fetch(
-    `*[_type == "chapter"][1]{
+    `*[_type == "chapter" && slug.current==$slug][0]{
       title, intro, parts[]->
       { _type=="dishList" => {_type, title, intro, dishes[]->{_type, name, description, mainPhoto->, variants }},
         _type=="part" => {_type, title, content[]{..., _type=='reference' => {"photo":@->{image, caption, place->, dish->}}}}
       }
-    }`
+    }`,
+    {slug}
   );
 };
 

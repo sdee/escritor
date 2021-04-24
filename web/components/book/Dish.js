@@ -19,7 +19,6 @@ export const Variants = ({ variants }) => {
 export const Dish = ({ mainPhoto = {}, name, description, variants = [] }) => {
   return (
     <>
-      <h3>{name}</h3>
       <BlockContent blocks={description} />
       {variants ? <Variants variants={variants} /> : <></>}
     </>

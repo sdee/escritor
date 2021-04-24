@@ -1,32 +1,20 @@
-const client = require('./client')
+const client = require("./client");
 
 module.exports = {
   // Make sure that your node enviroment supports async/await
   exportPathMap: async function (defaultPathMap) {
-  
-    const path = await client
-      // get all the posts and return those with slugs
+    // start with basic static routes
+    const pathMap = { "/": { page: "/home" } }
+    // now dynamically generate routes
+    await client
       .fetch('*[_type == "post"].slug.current')
-      .then(data =>
-        {
-        // use reduce to build an object with routes
-        // and select the blog.js file, and send in the
-        // correct query paramater.
-        const routes = data.reduce(
-          (acc, slug) => {console.log(slug); return ({
-            '/': { page: '/' },
-            ...acc,
-            [`/blog/${slug}`]: { page: '/post', query: { slug } }
-          })},
-          {}
-       
-          )
-          return routes;
-
-        }
-        
+      .then((data) =>
+        data.forEach(
+          (slug) =>
+            (pathMap[`/blog/${slug}`] = { page: "/post", query: { slug } })
+        )
       )
-      .catch(console.error)
-    return path
-  }
-}
+    await client.fetch('*[_type == "chapter"].slug.current').then((data)=>data.forEach((slug)=>(pathMap[`/chapter/${slug}`] = { page: "/chapter", query: { slug } })))
+    return pathMap;
+  },
+};
