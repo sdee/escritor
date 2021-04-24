@@ -128,7 +128,7 @@ Chapter.getInitialProps = async function (context) {
   return await client.fetch(
     `*[_type == "chapter"][1]{
       title, intro, parts[]->
-      { _type=="dishList" => {_type, title, intro, dishes[]->{_type, name, description, mainPhoto->}},
+      { _type=="dishList" => {_type, title, intro, dishes[]->{_type, name, description, mainPhoto->, variants }},
         _type=="part" => {_type, title, content[]{..., _type=='reference' => {"photo":@->{image, caption, place->, dish->}}}}
       }
     }`
