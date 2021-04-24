@@ -25,7 +25,13 @@ export default {
                   ]
               }
           ]
-      }
+      },
+      {
+        name: 'coverImage',
+        title: 'Cover Image',
+        type: 'reference',
+        to: [{type: 'photo'}]
+      },
     ],
   };
   

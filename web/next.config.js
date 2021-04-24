@@ -4,7 +4,7 @@ module.exports = {
   // Make sure that your node enviroment supports async/await
   exportPathMap: async function (defaultPathMap) {
     // start with basic static routes
-    const pathMap = { "/": { page: "/" } }
+    const pathMap = { "/": { page: "/" }, "/about": {page: "/about"} }
     // now dynamically generate routes
     await client
       .fetch('*[_type == "post"].slug.current')

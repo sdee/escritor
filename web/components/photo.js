@@ -38,9 +38,11 @@ export const Caption = ({ caption, place, dish }) => {
 
 export const Photo = ({ photo: { place, image, caption, dish } }) => {
   return (
-    <figure>
-      <img src={urlFor(image).width(800).url()} />
+    <div class="flex flex-wrap justify-center">
+    <figure class="py-0 mx-3 p-0">
+      <img src={urlFor(image).width(500).url()} />
       <figcaption><Caption caption={caption} dish={dish} place={place} /></figcaption>
     </figure>
+    </div>
   );
 };
