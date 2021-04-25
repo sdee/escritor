@@ -17,6 +17,8 @@ import restaurant from './restaurant'
 import place from './place'
 import subgenre from './subgenre'
 import variant from './variant'
+import restaurantBlurb from './restaurantBlurb'
+import restaurantList from './restaurantList'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -36,6 +38,8 @@ export default createSchema({
     post,
     location,
     restaurant,
+    restaurantBlurb,
+    restaurantList,
     place,
     variant,
     // When added to this list, object types can be used as

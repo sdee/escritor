@@ -1,5 +1,6 @@
 const client = require("../client");
 import { DishList } from "../components/book/DishList";
+import {RestaurantList} from "../components/book/RestaurantList"
 import { Part } from "../components/book/Part";
 
 const Chapter = ({ title, intro, parts=[] }) => {
@@ -12,7 +13,11 @@ const Chapter = ({ title, intro, parts=[] }) => {
       {parts.map((part) => {
         if (part._type === "dishList") {
           return <DishList {...part} />;
-        } else if (part._type === "part") {
+        }
+        else if (part._type=="restaurantList") {
+          return <RestaurantList {...part} />
+        }
+         else if (part._type === "part") {
           return <Part {...part} />;
         }
       })}
@@ -26,6 +31,7 @@ Chapter.getInitialProps = async function (context) {
     `*[_type == "chapter" && slug.current==$slug][0]{
       title, intro, parts[]->
       { _type=="dishList" => {_type, title, intro, coverImage->, dishes[]->{_type, name, description, mainPhoto->, variants }},
+      _type=="restaurantList" => {_type, title, intro, restaurants[]{restaurant->, description, dishesToTry} },
         _type=="part" => {_type, title, content[]{..., _type=='reference' => {"photo":@->{image, caption, place->, dish->}}}}
       }
     }`,
