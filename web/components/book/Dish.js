@@ -16,12 +16,13 @@ export const Variants = ({ variants }) => {
   );
 };
 
-export const Dish = ({ mainPhoto, name, description, variants = [] }) => {
+export const Dish = ({ mainPhoto, name, description, variants = [], secondaryPhoto }) => {
   return (
     <>
     {mainPhoto && <Photo photo={mainPhoto}/>}
       <BlockContent blocks={description} />
       {variants ? <Variants variants={variants} /> : <></>}
+      {secondaryPhoto ? <Photo photo={secondaryPhoto}/> : <></>}
     </>
   );
 };

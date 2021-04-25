@@ -33,5 +33,10 @@ export default {
         },
       ],
     },
+    {
+      name: "endcap",
+      title: "Endcap Photo",
+      type: "image"
+    }
   ],
 };

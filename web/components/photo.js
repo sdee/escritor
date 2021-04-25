@@ -1,7 +1,6 @@
 import { urlFor, joinIfExists } from "../util";
 
 const _formatPlace = ({ name, _type, location=""}) => {
-   
   let placeString = "";
   const { address="", neighborhood, city } = location;
   const cityString = joinIfExists(neighborhood, city);
