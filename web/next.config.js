@@ -14,7 +14,7 @@ module.exports = {
             (pathMap[`/blog/${slug}`] = { page: "/post", query: { slug } })
         )
       )
-    await client.fetch('*[_type == "chapter"].slug.current').then((data)=>data.forEach((slug)=>(pathMap[`/chapter/${slug}`] = { page: "/chapter", query: { slug } })))
+    await client.fetch('*[_type == "chapter"].slug.current').then((data)=>data.forEach((slug)=>(pathMap[`/book/chapter/${slug}`] = { page: "/chapter", query: { slug } })))
     return pathMap;
   },
 };
