@@ -22,6 +22,7 @@ export default {
       type: "image",
       options: {
         isHighlighted: true,
+        metadata: ["dimensions"],
       },
     },
     {
@@ -36,5 +37,10 @@ export default {
       type: "reference",
       to: [{ type: "restaurant" }, { type: "place" }],
     },
+    {
+      name: "vertical",
+      title: "Vertical",
+      type: "boolean",
+    }
   ],
 };
