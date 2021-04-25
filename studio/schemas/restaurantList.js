@@ -19,5 +19,11 @@ export default {
       type: "array",
       of: [{ type: "restaurantBlurb" }],
     },
+    {
+      name: 'coverImage',
+      title: 'Cover Image',
+      type: 'reference',
+      to: [{type: 'photo'}]
+    }
   ],
 };
