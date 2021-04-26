@@ -52,5 +52,11 @@ export default {
         },
       ],
     },
+    {
+      name: "whereToTry",
+      title: "Where To Try",
+      type: "array",
+      of: [{ type: "reference", to: [{ type: "restaurant" }] }],
+    },
   ],
 };
