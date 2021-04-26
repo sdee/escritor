@@ -22,7 +22,7 @@ export default {
       type: "image",
       options: {
         isHighlighted: true,
-        metadata: ["dimensions"],
+        metadata: ["image"],
       },
     },
     {
