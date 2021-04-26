@@ -26,7 +26,6 @@ const Chapter = ({ title, intro, endcap, parts = [] }) => {
       {endcap && (
         <>
         <div class="flex flex-wrap justify-center">
-        {/* <hr style={{width: 600}} class="py-3" /> */}
             <figure class="py-8 mx-3">
               <img src={urlFor(endcap).width(500).url()} />
             </figure>
