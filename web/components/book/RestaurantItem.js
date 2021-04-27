@@ -1,11 +1,10 @@
 import { urlFor, joinIfExists } from "../../util";
 export const RestaurantItem = ({ description, restaurant, dishesToTry }) => {
-
   const {
     name,
-    location: { neighborhood, city },
+    location: { neighborhood, city } = {}
   } = restaurant;   
-
+  
   return (
     <>
       <h3>{name}</h3>
