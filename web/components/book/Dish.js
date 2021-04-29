@@ -17,7 +17,7 @@ export const Variants = ({ variants }) => {
 };
 const serializers = {
   types: {
-    reference: ({ node }) => {
+    reference: ( {node} ) => {
       const { photo } = node;
       return <Photo photo={photo} />;
     },
