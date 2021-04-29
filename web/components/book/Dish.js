@@ -15,12 +15,20 @@ export const Variants = ({ variants }) => {
     </div>
   );
 };
+const serializers = {
+  types: {
+    reference: ({ node }) => {
+      const { photo } = node;
+      return <Photo photo={photo} />;
+    },
+  },
+};
 
 export const Dish = ({ mainPhoto, name, description, variants = [], secondaryPhoto }) => {
   return (
     <>
     {mainPhoto && <Photo photo={mainPhoto}/>}
-      <BlockContent blocks={description} />
+      <BlockContent blocks={description} serializers={serializers} />
       {variants ? <Variants variants={variants} /> : <></>}
       {secondaryPhoto ? <Photo photo={secondaryPhoto}/> : <></>}
     </>

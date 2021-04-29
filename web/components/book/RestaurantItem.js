@@ -4,7 +4,6 @@ export const RestaurantItem = ({ description, restaurant, dishesToTry }) => {
     name,
     location: { neighborhood, city } = {}
   } = restaurant;   
-  
   return (
     <>
       <h3>{name}</h3>

@@ -35,7 +35,7 @@ export const Caption = ({ caption, place, dish }) => {
   return <i>{formattedCaption}</i>;
 };
 
-export const Photo = ({ photo: { place, image, caption, dish, vertical } }) => {
+export const Photo = ({ photo: { place, image, caption, dish, vertical }={} }) => {
   const width = vertical ? 300 : 500;
   return (
     <div class="flex flex-wrap justify-center">
