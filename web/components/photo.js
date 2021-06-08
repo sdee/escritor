@@ -32,16 +32,16 @@ export const Caption = ({ caption, place, dish }) => {
       formattedCaption = _formatPlace(place);
     }
   }
-  return <i>{formattedCaption}</i>;
+  return formattedCaption ?<figcaption><i>{formattedCaption}</i></figcaption> : <></>;
 };
 
 export const Photo = ({ photo: { place, image, caption, dish, vertical }={} }) => {
   const width = vertical ? 300 : 500;
   return (
-    <div class="flex flex-wrap justify-center">
-    <figure class="py-0 mx-3 p-0">
+    <div class="flex flex-wrap justify-center py-0">
+    <figure class="py-0 mx-3 my-0">
       <img src={urlFor(image).width(width).url()} />
-      <figcaption><Caption caption={caption} dish={dish} place={place} /></figcaption>
+      <Caption caption={caption} dish={dish} place={place} />
     </figure>
     </div>
   );
