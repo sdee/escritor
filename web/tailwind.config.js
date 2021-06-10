@@ -12,27 +12,15 @@ module.exports = {
               paddingTop: '0',
               paddingBottom: '0',
             },
-            'figure > *': {
-              marginTop: '0',
-              marginBottom: '0',
-              paddingTop: '0',
-              paddingBottom: '0'
-            },
           },
         },
           "lg": {
             css: {
               figure: {
-                marginTop: '0',
-                marginBottom: '0',
-                paddingTop: '0',
-                paddingBottom: '0',
-              },
-              'figure > *': {
-                marginTop: '0',
-                marginBottom: '0',
-                paddingTop: '0',
-                paddingBottom: '0'
+                marginTop: '0px',
+                marginBottom: '0px',
+                paddingTop: '10 px',
+                paddingBottom: '5px',
               },
             },
           },
