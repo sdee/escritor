@@ -35,8 +35,10 @@ export const Caption = ({ caption, place, dish }) => {
   return formattedCaption ?<figcaption><i>{formattedCaption}</i></figcaption> : <></>;
 };
 
-export const Photo = ({ photo: { place, image, caption, dish, vertical }={} }) => {
-  const width = vertical ? 300 : 500;
+export const Photo = ({ photo: { place, image, caption, dish, vertical}={}, customWidth }) => {
+  let width;
+  width = vertical ? 300 : 500;
+  width = customWidth ? customWidth : width;
   return (
     <div class="flex flex-wrap justify-center py-0">
     <figure class="py-0 mx-3 my-0">
