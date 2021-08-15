@@ -26,11 +26,11 @@ const serializers = {
 
 export const Dish = ({ mainPhoto, name, description, variants = [], secondaryPhoto }) => {
   return (
-    <>
+    <div class="pt-8 prose prose-indigo prose-lg text-gray-500 mx-auto">
     {mainPhoto && <Photo photo={mainPhoto}/>}
       <BlockContent blocks={description} serializers={serializers} />
       {variants ? <Variants variants={variants} /> : <></>}
       {secondaryPhoto ? <Photo photo={secondaryPhoto}/> : <></>}
-    </>
+    </div>
   );
 };
