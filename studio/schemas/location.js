@@ -13,7 +13,7 @@ export default {
             title: 'Neighborhood',
             type: 'string',
             options: {
-            list: ['Miraflores', 'Barranco', 'Callao', 'Lince', 'San Isidro', 'La Victoria', 'Surquillo', 'San Miguel', 'Magdalena']
+            list: ['Miraflores', 'Barranco', 'Callao', 'Lince', 'Pueblo Libre', 'San Isidro', 'La Victoria', 'Surquillo', 'San Miguel', 'Magdalena']
             }
         },
         {
