@@ -20,10 +20,15 @@ export default {
       of: [{ type: "restaurantBlurb" }],
     },
     {
-      name: 'coverImage',
-      title: 'Cover Image',
-      type: 'reference',
-      to: [{type: 'photo'}]
+      name: "coverImage",
+      title: "Cover Image",
+      type: "reference",
+      to: [{type: "photo"}]
+    },
+    {
+      name: "compact",
+      title: "Compact?",
+      type: 'boolean',
     }
   ],
 };
