@@ -4,6 +4,7 @@ const BlockContent = require("@sanity/block-content-to-react");
 export const Variants = ({ variants }) => {
   return (
     <div>
+      <b>Variations</b>
       <ul>
         {variants.map((v) => (
           <li>
@@ -26,10 +27,10 @@ const serializers = {
 
 export const Dish = ({ mainPhoto, name, description, variants = [], secondaryPhoto }) => {
   return (
-    <div class="pt-8 prose prose-indigo prose-lg text-gray-500 mx-auto">
+    <div class="pt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
     {mainPhoto && <Photo photo={mainPhoto}/>}
       <BlockContent blocks={description} serializers={serializers} />
-      {variants ? <Variants variants={variants} /> : <></>}
+      {variants.length > 0 ? <Variants variants={variants} /> : <></>}
       {secondaryPhoto ? <Photo photo={secondaryPhoto}/> : <></>}
     </div>
   );
