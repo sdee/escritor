@@ -43,7 +43,7 @@ Chapter.getInitialProps = async function (context) {
     `*[_type == "chapter" && slug.current==$slug][0]{
       title, intro, endcap, parts[]->
       { _type=="dishList" => {_type, title, intro, coverImage->{image, caption, place->, vertical}, dishes[]->{_type, name, description[]{ ..., _type=='reference' => {"photo":@->{image, caption, place->, dish->, vertical}}}, mainPhoto->{image, caption, place->, vertical},  secondaryPhoto->{image, caption, place->, vertical}, variants }},
-      _type=="restaurantList" => {_type, title, intro, restaurants[]{restaurant->, description, dishesToTry},  coverImage->{image, caption, place->, vertical} },
+      _type=="restaurantList" => {_type, title, intro, compact, restaurants[]{restaurant->, description, dishesToTry},  coverImage->{image, caption, place->, vertical} },
         _type=="part" => {_type, title, content[]{..., _type=='reference' => {"photo":@->{image, caption, place->, dish->, vertical}}}}
       }
     }`,
