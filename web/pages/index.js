@@ -5,27 +5,47 @@ const Index = ({ featureImages }) => {
   return (
     <div>
       <h1>
-        <span class="mt-2 block text-3xl leading-8 font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <span class="px-4 py-3 mt-2 block text-5xl leading-8 font-extrabold tracking-tight text-gray-900">
           How to Eat in Peru
         </span>
       </h1>
-      <div>
-        <div class="max-w-4xl p-8">
-          <Video
-            videoSrcURL="https://player.vimeo.com/video/352210574"
-            videoTitle="How to Eat in Peru Trailer"
-          />
+      <div class="max-w-4xl p-8">
+        <Video
+          videoSrcURL="https://player.vimeo.com/video/352210574"
+          videoTitle="How to Eat in Peru Trailer"
+        />
+      </div>
+      {/* <div class="mx-auto py-12 px-4 sm:px-6 lg:py-10 lg:px-20 lg:flex lg:items-center justify-start"> */}
+      <div class="max-w-5xl px-4 py-6 lg:py-3 lg:px-8">
+        <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+          <span class="block">Ready to dive into Peruvian cuisine?</span>
+        </h2>
+        <p  class="mt-3 text-xl mx-auto text-xl text-gray-500">
+          Learn about the best places in Peru to enjoy everything from street
+          food to tasting menus. With the help of high-quality photos and clear descriptions, this guide will help you get acquainted with over 50 different dishes
+          including many classics like Ceviche and Lomo Saltado. The regional
+          guides will help you delve into the regional cuisines of Lima, Cusco, Arequipa, the Northern Coast, and the Peruvian Amazon.
+        </p>
+        <div class="mt-8 flex lg:mt-5 lg:flex-shrink-0">
+          <div class="inline-flex rounded-md shadow">
+            <a
+              href="https://buy.stripe.com/bIY8xMdit9bz1dm000"
+              class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-large font-bold rounded-md text-white bg-yellow-600 hover:bg-yellow-700"
+            >
+              Buy now
+            </a>
+          </div>
         </div>
       </div>
       <div class="px-4 py-6 lg:py-8 lg:px-8">
-        <h2 class="text-3xl font-extrabold  text-gray-900 sm:text-4xl">
+        <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
           Book Features
         </h2>
         <ul role="list" class="grid grid-cols-3 gap-3 max-w-4xl">
           {featureImages.map((image) => (
             <div class="text-m max-w-prose mx-auto p-2">
               <li class="relative">
-                <div class="focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500 group block w-full rounded overflow-hidden">
+                <div class="focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-yellow-500 group block w-full rounded overflow-hidden">
                   <img src={urlFor(image.image).width(350).url()} />
                 </div>
                 <p>{image.caption}</p>
@@ -46,12 +66,12 @@ const Index = ({ featureImages }) => {
               </dt>
               <dd class="mt-2 md:mt-0 md:col-span-7">
                 <p class="text-base text-gray-500">
-                  This book is about Peruvian food in all of its form. It covers
-                  Peru's most famous dishes including ceviche and lomo saltado
-                  as well as many dishes off the bean path. It covers regional
-                  dishes in Lima, Cusco, the coast, the Amazon, and the Andes.
-                  It covers everything from street food to exquisite tasting
-                  menus.
+                  This book is about Peruvian food in all of its forms. It
+                  covers Peru's most famous dishes including ceviche and lomo
+                  saltado as well as many dishes off the bean path. It also covers
+                  regional dishes in Lima, Cusco, the coast, the Amazon, and the
+                  Andes. It covers everything from street food to exquisite
+                  tasting menus.
                 </p>
               </dd>
             </div>
@@ -152,7 +172,7 @@ const Index = ({ featureImages }) => {
               </dt>
               <dd class="mt-2 md:mt-0 md:col-span-7">
                 <p class="text-base text-gray-500 py-3">
-                  I wrote the bulk of this book more than three years ago, with
+                  I wrote the bulk of this book more than four years ago, with
                   major updates and revisions after every trip. I joke that it
                   took me about six months to write this book and another four
                   years to distribute it.
