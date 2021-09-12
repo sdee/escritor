@@ -26,6 +26,7 @@ exports.handler = async ({ body, headers }) => {
         from: process.env.FROM_EMAIL_ADDRESS,
         subject: `Thank you for your purchase of How to Eat in Peru`,
         text: "hola hola hola",
+        template_id: process.env.SENDGRID_TEMPLATE_ID,
       };
       console.log(msg)
       await sgMail.send(msg);
