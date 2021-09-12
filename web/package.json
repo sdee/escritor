@@ -17,13 +17,13 @@
     "@sanity/block-content-to-react": "^2.0.7",
     "@sanity/client": "^2.7.1",
     "@sanity/image-url": "^0.140.22",
+    "@sendgrid/mail": "^7.4.6",
     "@tailwindcss/aspect-ratio": "^0.2.0",
     "@tailwindcss/typography": "^0.4.0",
     "antd": "^4.12.3",
     "next": "^10.0.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "sendgrid": "^5.2.3",
     "stripe": "^8.174.0"
   },
   "devDependencies": {
