@@ -34,7 +34,7 @@ const ThankYou = () => {
           <br />
           <ul>
             <li>
-              <b>Instagram: </b> @howtoeatinperu
+              <b>Instagram: </b> <a href="https://www.instagram.com/howtoeatinperu/">@howtoeatinperu</a>
             </li>
             <li>
               <b>Facebook: </b>
@@ -43,14 +43,12 @@ const ThankYou = () => {
               </a>
             </li>
             <li>
-              <b>E-mail: </b>sutee@howtoeatinperu.com
+              <b>E-mail: </b>sutee[at]howtoeatinperu.com
             </li>
           </ul>
         </p>
       </div>
     </div>
-    //       </div>
-    //     </div>
   );
 };
 
