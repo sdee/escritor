@@ -23,6 +23,7 @@
     "next": "^10.0.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "sendgrid": "^5.2.3",
     "stripe": "^8.174.0"
   },
   "devDependencies": {
