@@ -3,3 +3,5 @@ dist
 .next
 out
 .DS_Store
+# Local Netlify folder
+.netlify
