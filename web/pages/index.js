@@ -15,14 +15,13 @@ const Index = ({ featureImages }) => {
           videoTitle="How to Eat in Peru Trailer"
         />
       </div>
-      {/* <div class="mx-auto py-12 px-4 sm:px-6 lg:py-10 lg:px-20 lg:flex lg:items-center justify-start"> */}
       <div class="max-w-5xl px-4 py-6 lg:py-3 lg:px-8">
         <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
           <span class="block">Ready to dive into Peruvian cuisine?</span>
         </h2>
-        <p  class="mt-3 text-xl mx-auto text-xl text-gray-500">
+        <p class="mt-3 text-xl mx-auto text-xl text-gray-500">
           Learn about the best places in Peru to enjoy everything from street
-          food to tasting menus. With the help of high-quality photos and clear descriptions, this guide will help you get acquainted with over 50 different dishes
+          food to tasting menus. With the help of high-quality photos and clear descriptions, this guide will help you get acquainted with over 100 different dishes
           including many classics like Ceviche and Lomo Saltado. The regional
           guides will help you delve into the regional cuisines of Lima, Cusco, Arequipa, the Northern Coast, and the Peruvian Amazon.
         </p>
@@ -54,7 +53,7 @@ const Index = ({ featureImages }) => {
           ))}
         </ul>
       </div>
-      <div class="max-w-4xl py-6 px-4 divide-y-2 divide-gray-200 sm:px-6 lg:py-8   lg:px-8">
+      <div class="max-w-4xl py-6 px-4 divide-y-2 divide-gray-200 sm:px-6 lg:py-8 lg:px-8">
         <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
           Frequently asked questions
         </h2>
@@ -137,7 +136,7 @@ const Index = ({ featureImages }) => {
               <dd class="mt-2 md:mt-0 md:col-span-7">
                 <ul class="list-disc font-formal text-gray-500 ">
                   <li>
-                    Detailed descriptions of over 50 dishes including ceviche,
+                    Detailed descriptions of over 100 dishes including ceviche,
                     lomo saltado, and pisco sours
                   </li>
                   <li>
