@@ -1,3 +1,4 @@
+import Link from 'next/link';
 const About = () => {
   return (
     <div class="relative py-16 bg-white overflow-hidden mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
@@ -74,6 +75,10 @@ const About = () => {
         didn’t go the most efficient route, I felt like I was peeling away more
         and more layers each time.
       </p>
+      <Link href="/">
+          <a>Back</a>
+        </Link>
+
     </div>
   );
 };
