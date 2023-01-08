@@ -28,7 +28,7 @@ const Index = ({ featureImages }) => {
         <div class="mt-8 flex lg:mt-5 lg:flex-shrink-0">
           <div class="inline-flex rounded-md shadow">
             <a
-              href="https://buy.stripe.com/bIY8xMdit9bz1dm000"
+              href="https://buy.stripe.com/fZe6pEbal3Rf6xG9AB"
               class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-large font-bold rounded-md text-white bg-yellow-600 hover:bg-yellow-700"
             >
               Buy now
